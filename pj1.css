@@ -1,0 +1,84 @@
+img
+{
+	width: 150px;
+	height: 150px;
+	vertical-align:middle;
+    float: left;
+    margin-right: 30px;
+    margin-left: 30px;
+
+}
+
+
+
+body
+{
+    background-image: url("staf.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 1500px;
+    background-position:center center;
+    font-family: "cursive";
+}
+
+header
+
+{
+	 color: white;
+	 font-size: 70px;
+	 font-weight: bold;
+	 font-family: "cursive";
+	 text-align: center;
+	 font-style: oblique;
+	 border-top: 5px double white ;
+	 border-bottom: 5px double white;
+	 background: rgba(0, 0, 0, 0.5);
+	 
+	 
+}
+
+.description
+{
+	color: white;
+	padding: 20px;
+	margin-left: 350px;
+	margin-right: 350px;
+	font-size: 25px;
+	text-align: center;
+	border : double 3px white;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: "cursive";
+
+}
+
+h1
+{
+	font-size: 45px;
+	font-family: "cursive";
+}
+
+.eleve
+{
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 25px;
+	text-align: left;
+	font-family: "cursive";
+}
+
+
+
+
+#Presentation
+{
+    
+    padding: 5px;
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "cursive";
+
+}
+
