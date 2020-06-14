@@ -1,0 +1,67 @@
+*{font-family: cursive;}
+
+/*header
+{
+	background-image: url("https://s2.best-wallpaper.net/wallpaper/2880x1800/1809/Pizza-pie-tomatoes-oil_2880x1800.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}*/
+
+/*.effetcool{
+    background-image: url("https://www.sheridan-uk.com/wp-content/uploads/Nilo.jpg");
+  
+    display:flex;
+  
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }*/
+  .pizzagif {
+    position: relative;
+    width:  350px;
+    height: 200px;
+    border: 3px solid black;
+}
+.notvisible{background-color: transparent;}
+.nospizzas{
+    background-image: url("https://www.sheridan-uk.com/wp-content/uploads/Nilo.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+.premierebande{
+    display: flex;
+justify-content: space-around;
+
+}
+ html{
+    border: 6px solid black; 
+    background-image: url("https://www.sheridan-uk.com/wp-content/uploads/Nilo.jpg");
+  
+    /* Set a specific height */
+    display:flex;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ .boissons{
+     border-style: dashed;
+     border-color: white;
+     border-width: 2px;
+     margin: 10px;
+     margin-top: 10px;
+     background-color:grey;
+ }
+.prixboissons{font-family: cursive;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+color:white;}
+.ligne{flex:1;
+border-bottom: 1px dashed black;}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="fr"></html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title>Make Your Pizza</title>
+    <link rel="stylesheet" href="Jouer.css">
+ </head>
+ <body>
+    <header>
+        <div class = "premierebande">
+          <U style = "color: white"><p style = "font-family: cursive;color: white;font-size: 50pt;">C'est vous le chef !</p></U>
+        </div>
+        <!--<center>
+            <img id ="drag" width="336" height="69" draggable="true" ondragstart="drag(event)" class = "ingredient" src= "https://img2.freepng.fr/20180517/bfq/kisspng-pizza-salami-pepperoni-drawing-clip-art-5afe4d22894511.6810165015266153305623.jpg">
+        </center>
+        <div id = "cadre" ondrop="drop(event)" ondragover="allowDrop(event)">Your oven is ready</div>-->
+    </header>
+    <div style = "display: flex; justify-content: space-around; ">
+        <div style="width: 200px; border: grey;border-style:double; border-width: 2px;">
+          <p style="margin:15px; color: white;font-family: cursive;">Choisissez le topping :</p>
+          <ul class="checkbox"> 
+          <li><input type="checkbox" id="top1" value="Pepperoni" /><label for="top1" style="font-family: cursive; color:white">Pepperoni</label></li> 
+          <li><input type="checkbox" id="top2" value="Chorizo" /><label for="top2"style="font-family: cursive; color:white" >Chorizo</label></li> 
+          <li><input type="checkbox" id="top3" value="Champignons" /><label for="top3" style="font-family: cursive; color:white">Champignons</label></li> 
+          <li><input type="checkbox" id="top4" value="Onions" /><label for="top4" style="font-family: cursive; color:white">Onions</label></li> 
+          <li><input type="checkbox" id="top5" value="Poivrons" /><label for="top5" style="font-family: cursive; color:white">Poivrons</label></li> 
+          <li><input type="checkbox" id="top6" value="Ananas" /><label for="top6"style="font-family: cursive; color:white" >Ananas </label></li> 
+          </ul> 
+        </div>
+        <div style="width: 200px; border: grey;border-style:double; border-width: 2px;">
+          <p style="margin:15px; color: white;font-family: cursive;">Choisissez la viande :</p>
+          <ul class="checkbox"> 
+          <li><input type="checkbox" id="viande1" value="Poulet" /><label for="viande1" style="font-family: cursive; color:white">Poulet</label></li> 
+          <li><input type="checkbox" id="viande2" value="Boeuf" /><label for="viande2"style="font-family: cursive; color:white" >Boeuf</label></li> 
+          <li><input type="checkbox" id="viande3" value="Agneau" /><label for="viande3" style="font-family: cursive; color:white">Agneau</label></li> 
+          <li><input type="checkbox" id="viande4" value="Mouton" /><label for="viande4" style="font-family: cursive; color:white">Mouton</label></li> 
+          <li><input type="checkbox" id="viande5" value="Porc" /><label for="viande5" style="font-family: cursive; color:white">Porc</label></li> 
+          <li><input type="checkbox" id="viande6" value="Saumon" /><label for="viande6"style="font-family: cursive; color:white" >Saumon </label></li> 
+          </ul> 
+        </div>
+        <div style="width: 200px; border: grey;border-style:double; border-width: 2px;">
+          <p style="margin:15px; color: white;font-family: cursive;">Choisissez la pâte :</p>
+          <ul class="checkbox"> 
+          <li><input type="checkbox" id="pate1" value="Fine" /><label for="pate1" style="font-family: cursive; color:white">Fine</label></li>
+          <li><input type="checkbox" id="pate2" value="Epaisse" /><label for="pate2"style="font-family: cursive; color:white" >Epaisse</label></li> 
+          <li><input type="checkbox" id="pate3" value="Fourrée emmental" /><label for="pate3" style="font-family: cursive; color:white">Fourrée emmental</label></li> 
+          <li><input type="checkbox" id="pate4" value="Fourrée mozzarella" /><label for="pate4" style="font-family: cursive; color:white">Fourrée mozzarella</label></li> 
+          <li><input type="checkbox" id="pate5" value="Fourrée épinards" /><label for="pate5" style="font-family: cursive; color:white">Fourrée épinards</label></li> 
+          <li><input type="checkbox" id="pate6" value="Fourrée cheddar" /><label for="pate6"style="font-family: cursive; color:white" >Fourrée cheddar </label></li> 
+          </ul> 
+        </div>
+    </div>
+    <div>
+    <center>
+      <button id="finaliser">Finaliser la pizza</button>
+    </center>
+    </div>
+    <center><div id="votrepizza" style="width: 200px; border: grey;border-style:double; border-width: 2px; color: white;font-family: cursive;">
+      Votre pizza : 
+    </center></div>
+
+
+    <script type="text/javascript">
+    alert("Sélectionnez tous vos ingrédients puis cliquez sur le bouton pour finaliser vos choix.");
+    document.getElementById('finaliser').onclick = function() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    var bouton=document.getElementById('finaliser');
+    bouton.disabled=true;
+    for (var checkbox of checkboxes) {
+    document.getElementById("votrepizza").append(checkbox.value + ', ');
+    
+
+  }
+}
+        /*event.preventDefault()
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function allowDrop(ev) {
+        ev.preventDefault();
+        
+        }
+        function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var img = document.createElement("img");
+        img.src = "https://www.myorangeway.com/wp-content/uploads/2019/08/Portable-Wood-Fired-Pizza-Oven-2.jpg";
+        img.setAttribute("height", "69");
+        img.setAttribute("width", "336");
+        ev.target.appendChild(img);
+        }*/
+        
+    </script>
+ </body>
+</html>
